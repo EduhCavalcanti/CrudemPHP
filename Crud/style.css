@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+table{
+  background-color: grey;
+  
+}
+
+
+th{
+  padding: 10px;
+}
+
+td{
+  padding: 10px;
+
+}
+
+.row{
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.add{
+  border: solid violet 1px;
+}
+.btn-add{
+  padding: 5px;
+  background-color: gray;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+input {
+  padding: 5px;
+  border: solid tomato 1px ;
+  border-radius: 7px;
+}
