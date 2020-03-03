@@ -24,6 +24,7 @@ td{
   margin: 10px 0;
   display: flex;
   justify-content: center;
+  background-color: green;
 }
 
 .add{
@@ -35,7 +36,9 @@ td{
   border-radius: 6px;
   cursor: pointer;
 }
-
+a{
+  text-decoration: none;
+}
 input {
   padding: 5px;
   border: solid tomato 1px ;

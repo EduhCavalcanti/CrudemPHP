@@ -1,7 +1,7 @@
 <?php
-
-//Conexão 
-
+//Iniciando a Sessão
+session_start();
+//Conexão com o bd
 require_once 'db_connect.php';
 
 //Vai verificar se existi o botão cadastrar, se existir vai pegar as variáveis
@@ -10,12 +10,14 @@ $nome = mysqli_escape_string($connect, $_POST['nome']);
 $nascimento = mysqli_escape_string($connect, $_POST['nascimento']);
 
 //Vai inserir na tabela aluno essas variáveis 
-$sql = "INSERT INTO alunos (nome, nascimento ) VALUES ('$nome', $nascimento)";
+$sql = "INSERT INTO alunos (nome, nascimento ) VALUES ('$nome', '$nascimento')";
 
 if(mysqli_query($connect, $sql)):
-  header('Location: ../index.php?sucesso');
+  $_SESSION['mensagem'] = "Cadastrado com sucesso";
+  header('Location: ../index.php');
 else:
-  header('Location: ../index.php?erro');
+  $_SESSION['mensagem'] = "Erro ao cadastrar";
+  header('Location: ../index.php');
 endif;  
 
 endif;
